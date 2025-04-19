@@ -92,7 +92,7 @@ function App() {
         setShowEditModal(true);
     };
 
-    // Handle save edit
+
     const handleSaveEdit = async (editedBill) => {
         try {
             await updateBill(editedBill.id, editedBill);
