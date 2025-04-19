@@ -1,6 +1,16 @@
 import React from 'react';
 
+const API_BASE_URL = 'http://localhost:5000';
+
 function BillTable({ bills, onDelete, onEdit }) {
+    // Helper function to get the correct image URL
+    const getImageUrl = (imageUrl) => {
+        if (!imageUrl) return '/placeholder-image.jpg';
+        if (imageUrl.startsWith('http')) return imageUrl;
+        if (imageUrl.startsWith('/static')) return `${API_BASE_URL}${imageUrl}`;
+        return imageUrl;
+    };
+
     if (bills.length === 0) {
         return (
             <div className="card">
@@ -47,8 +57,12 @@ function BillTable({ bills, onDelete, onEdit }) {
                                 <td>
                                     <div className="bill-preview">
                                         <img
-                                            src={bill.imageUrl || '/placeholder-image.jpg'}
+                                            src={getImageUrl(bill.imageUrl)}
                                             alt="Bill Preview"
+                                            onError={(e) => {
+                                                e.target.onerror = null;
+                                                e.target.src = '/placeholder-image.jpg';
+                                            }}
                                         />
                                     </div>
                                 </td>

@@ -118,24 +118,32 @@ function App() {
                 </div>
             </header>
 
-            {/* Dashboard Cards */}
-            <DashboardCards
-                totalSpent={totalSpent}
-                categories={categories}
-            />
+            <div className="main-content">
+                {/* Left Panel - Input Section */}
+                <div className="left-panel">
+                    {/* Upload Form */}
+                    <UploadForm onUpload={handleUpload} />
+                </div>
 
-            {/* Upload Form */}
-            <UploadForm onUpload={handleUpload} />
+                {/* Right Panel - Output Section */}
+                <div className="right-panel">
+                    {/* Dashboard Cards */}
+                    <DashboardCards
+                        totalSpent={totalSpent}
+                        categories={categories}
+                    />
+
+                    {/* Bills Table */}
+                    <BillTable
+                        bills={bills}
+                        onDelete={handleDeleteBill}
+                        onEdit={handleEditBill}
+                    />
+                </div>
+            </div>
 
             {/* Loading Animation */}
             {isLoading && <LoadingAnimation />}
-
-            {/* Bills Table */}
-            <BillTable
-                bills={bills}
-                onDelete={handleDeleteBill}
-                onEdit={handleEditBill}
-            />
 
             {/* Edit Bill Modal */}
             {showEditModal && currentBill && (
