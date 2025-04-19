@@ -1,0 +1,32 @@
+[
+    {
+        "vendor": "STARBUCKS Store #10208",
+        "date": "12/07/2014",
+        "amount": "4.95",
+        "category": "Miscellaneous",
+        "image": "6a2d47c3feb747b6bda0e8972833fe75.jpg",
+        "id": "57dbb648-7aec-497e-ae09-5cd3aad4ec91",
+        "timestamp": "2025-04-19T13:40:02.865839",
+        "imageUrl": "/static/uploads/6a2d47c3feb747b6bda0e8972833fe75.jpg"
+    },
+    {
+        "vendor": "FreshMart",
+        "date": "18/04/2025",
+        "amount": "210",
+        "category": "Supermarket",
+        "image": "570d9ef4c3584e939efc6f6ec58d727e.png",
+        "id": "d657fba4-4961-4af4-a8cd-08579224b618",
+        "timestamp": "2025-04-19T13:40:18.753556",
+        "imageUrl": "/static/uploads/570d9ef4c3584e939efc6f6ec58d727e.png"
+    },
+    {
+        "vendor": "STARBUCKS Store #10208",
+        "date": "12/07/2014",
+        "amount": "4.95",
+        "category": "Miscellaneous",
+        "image": "5a650928f97a4108b50506d67aebf492.jpg",
+        "id": "e539a117-c133-43f2-ac83-28abb8e0f5fd",
+        "timestamp": "2025-04-19T13:50:13.821076",
+        "imageUrl": "/static/uploads/5a650928f97a4108b50506d67aebf492.jpg"
+    }
+]
